@@ -30,13 +30,20 @@ int main()
     printf("%s comes last in dictionary\n",last);
     
    strcat(first,last);
+   
+   for(int i=strlen(first)-1;i>=0;i--)
+   {
+       if(first[i]=='a'||first[i]=='e'||first[i]=='i'||first[i]=='o'||first[i]=='u')
+       {
+        first[i]=toupper(first[i]);
+        printf("%c",first[i]);
+        continue;
+        }
+       printf("%c",first[i]);
+       
+   }
  
-   for(i=0;i<strlen(first);i++) 
-     {
-         if(first[i]=='a'||first[i]=='e'||first[i]=='i'||first[i]=='o'||first[i]=='u') first[i]=toupper(first[i]);
-        
-     }  
-    printf("%s\n",first);
+    
   
     return 0;
 }
